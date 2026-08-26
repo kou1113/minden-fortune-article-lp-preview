@@ -2,7 +2,8 @@
 
 関係者レビュー用の静的プレビューです。
 
-- `index.html`：LP本体
+- `index.html`：パターン1「悩み整理型」
+- `pattern2/index.html`：パターン2「結婚見極め型」
 - `styles.css`：表示スタイル
 - `script.js`：FAQ・固定CTAの挙動
 - `assets/`：ページで使用する画像のみ
