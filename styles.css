@@ -334,6 +334,8 @@ button, input { font: inherit; }
 .diary-lp .manga-ending > strong { color: #4b4148; }
 .diary-lp .manga-ending small { color: #867b80; }
 .diary-lp .experience-section > h2, .diary-lp .flow-section > h2, .diary-lp .faq-section > h2 { font-family: var(--hand); }
+.diary-lp .experience-section > h2 { font-size: clamp(17px, 5.5vw, 22px); letter-spacing: -.04em; }
+.diary-lp .experience-section > h2 span { display: block; white-space: nowrap; }
 .diary-lp .experience-story { position: relative; border: 0; background: rgba(255,255,255,.82); box-shadow: 3px 6px 15px rgba(76,60,67,.1); transform: rotate(.25deg); }
 .diary-lp .experience-story::before { content: ""; font-size: 0; }
 .diary-lp .experience-points article { border: 0; border-bottom: 1px dashed #d5c4be; background: rgba(255,255,255,.55); }
