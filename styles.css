@@ -47,6 +47,7 @@ button, input { font: inherit; }
 .article-meta { display: flex; flex-wrap: wrap; gap: 8px 15px; margin-top: 25px; padding-top: 13px; border-top: 1px solid var(--line); color: #8b8790; font-size: 11px; }
 .hero__visual { aspect-ratio: 1122 / 1402; margin: 0; overflow: hidden; background: #745a7c; }
 .hero__visual img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+.hero__pr { position: absolute; z-index: 4; right: 10px; bottom: 9px; padding: 2px 7px; border: 1px solid rgba(255,255,255,.65); color: #fff; background: rgba(31,26,38,.46); font-size: 9px; font-weight: 700; line-height: 1.45; letter-spacing: .08em; }
 .desktop-only { display: none; }
 
 .article-body { padding: 34px 20px 60px; }
@@ -211,6 +212,18 @@ button, input { font: inherit; }
 .service-caution { margin-bottom: 24px; padding: 14px; border-block: 1px solid rgba(215,187,124,.55); color: rgba(255,255,255,.72); background: rgba(0,0,0,.08); font-size: 11px; }
 .service-section .cta-note { color: rgba(255,255,255,.55); }
 
+.experience-story { position: relative; margin: 0 0 24px; padding: 24px 21px; border: 1px solid #dacbd0; background: linear-gradient(145deg, #fff, #f9eef0); font-family: var(--serif); }
+.experience-story::before { content: "“"; position: absolute; top: -12px; left: 12px; color: rgba(150,93,114,.2); font-family: Georgia, serif; font-size: 70px; line-height: 1; }
+.experience-story p { position: relative; margin: 0; color: #514c54; font-size: 14px; line-height: 2; }
+.experience-story p + p { margin-top: 14px; }
+.experience-points { display: grid; gap: 10px; }
+.experience-points article { display: grid; grid-template-columns: 42px 1fr; gap: 12px; padding: 17px 15px; border: 1px solid var(--line); background: #fff; }
+.experience-points article > span { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--pink); border-radius: 50%; color: var(--pink-dark); font-family: Georgia, serif; font-size: 10px; }
+.experience-points h3 { margin: 0 0 4px; color: var(--navy); font-family: var(--serif); font-size: 16px; line-height: 1.55; }
+.experience-points p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.proof-features .benefit-feature { border-color: rgba(215,187,124,.68); background: rgba(215,187,124,.1); }
+.proof-features .benefit-feature h3 { color: #fff3c9; }
+
 .fit-grid { display: grid; gap: 15px; }
 .fit-card { border: 1px solid var(--line); background: #fff; }
 .fit-card h3 { margin: 0; padding: 15px 17px; color: #fff; font-family: var(--serif); font-size: 18px; }
@@ -265,7 +278,7 @@ button, input { font: inherit; }
 .legal-notes p + p { margin-top: 9px; }
 
 .footer { width: min(430px, 100%); margin: 0 auto; color: rgba(255,255,255,.57); background: #191c2c; }
-.footer__inner { padding: 42px 20px 95px; text-align: center; }
+.footer__inner { padding: 42px 20px 44px; text-align: center; }
 .footer__brand { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 0 0 12px; }
 .footer__brand strong { color: rgba(255,255,255,.85); font-family: var(--serif); }
 .footer__brand span { padding: 2px 7px; border: 1px solid rgba(255,255,255,.26); font-size: 9px; }
