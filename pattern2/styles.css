@@ -303,3 +303,50 @@ button, input { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* 2026-08-27: SNS潜在層向けのブログ・日記帳UI */
+.diary-lp { --hand: "Klee", "YuKyokasho", "Hiragino Maru Gothic ProN", cursive; background: #e9e0d4; }
+.diary-lp .article { background: #fffaf1; }
+.diary-lp .article p, .diary-lp .article li, .diary-lp .article small, .diary-lp .article h2, .diary-lp .article h3 { word-break: normal; }
+.diary-lp .hero { margin: 0 7px; border: 7px solid #fffdf8; box-shadow: 0 8px 24px rgba(69,52,60,.16); }
+.diary-lp .hero__pr { right: 7px; bottom: 7px; border: 0; border-radius: 2px; background: rgba(54,43,55,.58); font-family: var(--sans); }
+.diary-lp .article-body { padding-top: 42px; background-color: #fffaf1; background-image: linear-gradient(90deg, transparent 13px, rgba(190,113,126,.22) 13px, rgba(190,113,126,.22) 14px, transparent 14px), repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(111,133,156,.095) 31px, rgba(111,133,156,.095) 32px); }
+.diary-lp .section-label { display: inline-block; margin-bottom: 12px; padding: 3px 10px 2px; color: #855d63; background: #f1dfc8; box-shadow: 2px 2px 0 rgba(128,91,98,.12); font-family: var(--hand); font-size: 11px; font-weight: 700; letter-spacing: .03em; transform: rotate(-1.2deg); }
+.diary-lp .answer-section { margin-bottom: 54px; }
+.diary-lp .answer-section > h2 { font-family: var(--hand); font-size: 27px; line-height: 1.7; }
+.diary-lp .answer-lead { position: relative; border: 1px solid #dfd2c8; border-left: 1px solid #dfd2c8; background: rgba(255,255,255,.83); box-shadow: 3px 5px 14px rgba(80,63,70,.09); transform: rotate(-.25deg); }
+.diary-lp .answer-lead::before, .diary-lp .quick-proof-section::before, .diary-lp .final-cta::before { content: ""; position: absolute; z-index: 3; top: -10px; left: 50%; width: 72px; height: 20px; background: rgba(225,203,168,.7); box-shadow: 0 1px 2px rgba(70,55,50,.08); transform: translateX(-50%) rotate(-2deg); }
+.diary-lp .answer-lead strong { font-family: var(--hand); }
+.diary-lp .manga-section { margin-bottom: 76px; color: #5c555b; background: #eee4d7; background-image: radial-gradient(circle at 18% 5%, rgba(255,255,255,.75), transparent 25%), repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(97,120,145,.08) 31px, rgba(97,120,145,.08) 32px); }
+.diary-lp .manga-heading > span { display: inline-block; padding: 2px 12px; color: #855d63; background: #f3dfe0; font-family: var(--hand); font-size: 12px; letter-spacing: .04em; transform: rotate(-1deg); }
+.diary-lp .manga-heading h2 { color: #3f3a42; font-family: var(--hand); font-size: 27px; }
+.diary-lp .manga-heading > p { color: #80777c; font-size: 10px; }
+.diary-lp .comic-pages { gap: 48px; padding-inline: 14px; }
+.diary-lp .comic-page { position: relative; }
+.diary-lp .comic-page::before { content: ""; position: absolute; z-index: 7; top: -9px; left: 50%; width: 78px; height: 19px; background: rgba(227,207,174,.78); box-shadow: 0 1px 2px rgba(70,55,50,.08); transform: translateX(-50%) rotate(1.8deg); }
+.diary-lp .comic-page:nth-child(even)::before { transform: translateX(-50%) rotate(-2.2deg); }
+.diary-lp .comic-page__art { border-width: 7px; border-color: #fffdf8; box-shadow: 4px 9px 22px rgba(69,52,60,.18); }
+.diary-lp .manga-ending { margin: 48px 14px 0; padding: 34px 20px 42px; border: 1px dashed #cbb9ae; color: #4e474d; background: rgba(255,250,241,.78); transform: rotate(.2deg); }
+.diary-lp .manga-ending > p, .diary-lp .manga-ending > strong { font-family: var(--hand); }
+.diary-lp .manga-ending > strong { color: #4b4148; }
+.diary-lp .manga-ending small { color: #867b80; }
+.diary-lp .quick-proof-section { position: relative; margin: 0 0 62px; padding: 43px 22px 34px; border: 1px solid #d9cabb; background: #fff8e9; background-image: repeating-linear-gradient(180deg, transparent 0, transparent 30px, rgba(118,135,151,.08) 30px, rgba(118,135,151,.08) 31px); box-shadow: 4px 7px 17px rgba(74,58,64,.1); transform: rotate(-.15deg); }
+.diary-lp .quick-proof-section > h2 { font-family: var(--hand); font-size: 25px; }
+.diary-lp .quick-proof-grid article { border: 0; border-bottom: 1px dashed #d7c6bd; background: rgba(255,255,255,.5); }
+.diary-lp .quick-proof-grid article > span { color: #8b626d; font-family: var(--hand); font-size: 11px; letter-spacing: .02em; }
+.diary-lp .quick-proof-grid strong { font-family: var(--hand); }
+.diary-lp .quick-proof-grid__benefit { border: 1px solid #d5bb84 !important; background: #fff1b9 !important; box-shadow: 2px 3px 0 rgba(139,106,50,.1); transform: rotate(.5deg); }
+.diary-lp .source-note { margin: 18px 3px 0; color: #857b7f; font-size: 10px; line-height: 1.8; }
+.diary-lp .faq-section > h2 { font-family: var(--hand); }
+.diary-lp .faq-list { border-top-style: dashed; }
+.diary-lp .faq-list details { border-bottom-style: dashed; background: rgba(255,255,255,.45); }
+.diary-lp .faq-list summary { font-family: var(--hand); }
+.diary-lp .final-cta { position: relative; margin: 12px 0 24px; padding: 55px 22px 42px; border: 1px solid #d5b9bd; color: #574e54; background: #f7e6e5; background-image: repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(137,104,113,.07) 31px, rgba(137,104,113,.07) 32px); box-shadow: 4px 7px 18px rgba(73,53,62,.13); transform: rotate(-.2deg); }
+.diary-lp .final-cta__mark { border: 0; color: #966675; background: transparent; font-family: var(--hand); font-size: 29px; }
+.diary-lp .final-cta > .final-cta__label { margin-bottom: 13px; color: #8b626d; font-family: var(--hand); font-size: 12px; }
+.diary-lp .final-cta > p:not(.final-cta__label) { font-family: var(--hand); font-size: 15px; }
+.diary-lp .final-cta h2 { color: #463e45; font-family: var(--hand); }
+.diary-lp .final-cta .cta-button { border: 0; border-radius: 4px; background: #aa687b; box-shadow: 4px 5px 0 #ddc1c7; transform: rotate(.35deg); }
+.diary-lp .final-cta .cta-button:hover { transform: rotate(.35deg) translateY(-2px); }
+.diary-lp .final-cta small { color: #82757a; }
+.diary-lp .final-cta .cta-button__eyebrow { color: #fff0c9; }
