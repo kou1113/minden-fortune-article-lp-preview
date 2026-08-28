@@ -365,7 +365,7 @@ button, input { font: inherit; }
 .diary-lp .final-cta__mark { border: 0; color: #966675; background: transparent; font-family: var(--hand); font-size: 29px; }
 .diary-lp .final-cta > .final-cta__label { margin-bottom: 13px; color: #8b626d; font-family: var(--hand); font-size: 12px; }
 .diary-lp .final-cta > p:not(.final-cta__label) { font-family: var(--hand); font-size: 15px; }
-.diary-lp .final-cta h2 { color: #463e45; font-family: var(--hand); font-size: clamp(15px, 4.9vw, 21px); letter-spacing: -.03em; white-space: nowrap; }
+.diary-lp .final-cta h2 { position: relative; left: -4px; color: #463e45; font-family: var(--hand); font-size: clamp(15px, 4.9vw, 21px); letter-spacing: -.03em; white-space: nowrap; }
 .diary-lp .final-cta .cta-button { border: 0; border-radius: 4px; background: #aa687b; box-shadow: 4px 5px 0 #ddc1c7; transform: rotate(.35deg); }
 .diary-lp .final-cta .cta-button:hover { transform: rotate(.35deg) translateY(-2px); }
 .diary-lp .final-cta small { color: #82757a; }
