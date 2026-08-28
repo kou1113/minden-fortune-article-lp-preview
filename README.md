@@ -4,7 +4,7 @@
 
 - `index.html`：パターン1「体験記事風・共感先行」
 - `pattern2/index.html`：パターン2「漫画ファースト・短縮型」
-- `pattern3/index.html`：パターン1を元に編集するパターン3
+- `pattern3/index.html`：パターン3「複雑愛・1分カード診断型」
 - `styles.css`：表示スタイル
 - `script.js`：FAQ・固定CTAの挙動
 - `assets/`：ページで使用する画像のみ
