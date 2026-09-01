@@ -180,6 +180,21 @@ button, input { font: inherit; }
 .complex-p4a { top: 4%; right: 3%; width: 38%; height: 12%; }
 .complex-p4b { top: 32%; left: 2.5%; width: 47%; height: 13%; font-size: clamp(7px, 2.05vw, 10px) !important; }
 .complex-p4c { top: 79%; right: 3%; width: 46%; }
+
+/* 年齢差恋愛漫画V2：台詞は修正しやすいHTMLオーバーレイ */
+.agegap-p1a { top: 3%; left: 3%; width: 42%; }
+.agegap-p1b { top: 27%; left: 3%; width: 40%; }
+.agegap-p1c { top: 58%; left: 3%; width: 35%; height: 9%; }
+.agegap-p1d { top: 91%; right: 3%; width: 31%; }
+.agegap-p2b { top: 30%; right: 3%; width: 35%; height: 9%; }
+.agegap-p2c { top: 54%; left: 3%; width: 40%; height: 12%; }
+.agegap-p2d { top: 89%; right: 3%; width: 37%; }
+.agegap-p3b { top: 3%; left: 31%; width: 40%; height: 12%; }
+.agegap-p3c { top: 29%; left: 3%; width: 41%; height: 10%; }
+.agegap-p3d { top: 87%; left: 29%; width: 44%; height: 10%; }
+.agegap-p4b { top: 28%; left: 3%; width: 40%; }
+.agegap-p4c { top: 46%; left: 3%; width: 39%; height: 10%; }
+.agegap-p4d { top: 84%; right: 2%; width: 46%; height: 12%; }
 .manga-ending { margin-top: 44px; padding: 38px 20px 46px; border-top: 1px solid rgba(255,255,255,.15); text-align: center; }
 .manga-ending > p { margin: 0; font-family: var(--serif); font-size: 15px; }
 .manga-ending > strong { display: block; margin: 10px 0 22px; color: #fff; font-family: var(--serif); font-size: 22px; line-height: 1.65; }
@@ -310,10 +325,10 @@ button, input { font: inherit; }
 .diary-lp .article p, .diary-lp .article li, .diary-lp .article small, .diary-lp .article h1, .diary-lp .article h2, .diary-lp .article h3 { max-width: 100%; overflow-wrap: anywhere; word-break: break-all; }
 .diary-lp .hero { margin: 0 7px; border: 7px solid #fffdf8; box-shadow: 0 8px 24px rgba(69,52,60,.16); }
 .diary-lp .hero__pr { right: 7px; bottom: 7px; border: 0; border-radius: 2px; background: rgba(54,43,55,.58); font-family: var(--sans); }
-.diary-lp .article-body { padding-top: 42px; background-color: #fffaf1; background-image: linear-gradient(90deg, transparent 13px, rgba(190,113,126,.22) 13px, rgba(190,113,126,.22) 14px, transparent 14px), repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(111,133,156,.095) 31px, rgba(111,133,156,.095) 32px); }
+.diary-lp .article-body { display: flex; flex-direction: column; padding-top: 42px; background-color: #fffaf1; background-image: linear-gradient(90deg, transparent 13px, rgba(190,113,126,.22) 13px, rgba(190,113,126,.22) 14px, transparent 14px), repeating-linear-gradient(180deg, transparent 0, transparent 31px, rgba(111,133,156,.095) 31px, rgba(111,133,156,.095) 32px); }
 .diary-lp .section-label { display: inline-block; margin-bottom: 12px; padding: 3px 10px 2px; color: #855d63; background: #f1dfc8; box-shadow: 2px 2px 0 rgba(128,91,98,.12); font-family: var(--hand); font-size: 11px; font-weight: 700; letter-spacing: .03em; transform: rotate(-1.2deg); }
 .diary-lp .answer-section { margin-bottom: 54px; }
-.diary-lp .answer-section > h2 { font-family: var(--hand); font-size: 27px; line-height: 1.7; }
+.diary-lp .answer-section > h2 { font-family: var(--hand); font-size: 27px; line-height: 1.7; text-align: center; }
 .diary-lp .answer-lead { position: relative; border: 1px solid #dfd2c8; border-left: 1px solid #dfd2c8; background: rgba(255,255,255,.83); box-shadow: 3px 5px 14px rgba(80,63,70,.09); transform: rotate(-.25deg); }
 .diary-lp .answer-lead::before, .diary-lp .experience-story::before, .diary-lp .quick-proof-section::before, .diary-lp .service-section::before, .diary-lp .final-cta::before { content: ""; position: absolute; z-index: 3; top: -10px; left: 50%; width: 72px; height: 20px; background: rgba(225,203,168,.7); box-shadow: 0 1px 2px rgba(70,55,50,.08); transform: translateX(-50%) rotate(-2deg); }
 .diary-lp .answer-lead strong { font-family: var(--hand); }
@@ -329,6 +344,82 @@ button, input { font: inherit; }
 .diary-lp .comic-page::before { content: ""; position: absolute; z-index: 7; top: -9px; left: 50%; width: 78px; height: 19px; background: rgba(227,207,174,.78); box-shadow: 0 1px 2px rgba(70,55,50,.08); transform: translateX(-50%) rotate(1.8deg); }
 .diary-lp .comic-page:nth-child(even)::before { transform: translateX(-50%) rotate(-2.2deg); }
 .diary-lp .comic-page__art { border-width: 7px; border-color: #fffdf8; box-shadow: 4px 9px 22px rgba(69,52,60,.18); }
+.diary-lp .comic-script { display: grid; gap: 14px; margin: 0 7px; padding: 20px 14px 18px; border: 2px solid #2e292d; border-top: 0; color: #332e31; background-color: #eee8df; background-image: radial-gradient(rgba(92,79,84,.12) .7px, transparent .7px); background-size: 5px 5px; box-shadow: 4px 8px 18px rgba(69,52,60,.11); font-family: var(--serif); }
+.diary-lp .comic-script p { position: relative; box-sizing: border-box; width: fit-content; max-width: 88%; margin: 0; padding: 14px 18px 13px 47px; border: 2px solid #393238; border-radius: 46% / 34%; color: #302b2e; background: #fff; box-shadow: 2px 3px 0 rgba(55,45,50,.1); font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.diary-lp .comic-script p:nth-child(odd) { justify-self: start; }
+.diary-lp .comic-script p:nth-child(even) { justify-self: end; }
+.diary-lp .comic-script p:not(.comic-script__narration):not(.comic-script__thought)::after { content: ""; position: absolute; bottom: -10px; width: 17px; height: 17px; border-right: 2px solid #393238; border-bottom: 2px solid #393238; background: #fff; transform: rotate(45deg); }
+.diary-lp .comic-script p:nth-child(odd)::after { left: 24px; }
+.diary-lp .comic-script p:nth-child(even)::after { right: 24px; }
+.diary-lp .comic-script b { position: absolute; top: 13px; left: 13px; color: #9d6275; font-family: var(--sans); font-size: 9px; letter-spacing: .06em; }
+.diary-lp .comic-script strong { color: #8c4f65; font-size: 1.08em; }
+.diary-lp .comic-script__narration,
+.diary-lp .comic-script__thought { justify-self: stretch !important; width: 100% !important; max-width: none !important; padding: 11px 13px !important; border: 1px solid #8b7b7f !important; border-left: 4px solid #b77b8d !important; border-radius: 0 !important; background: rgba(255,252,247,.96) !important; box-shadow: none !important; }
+.diary-lp .comic-script__thought { color: #716269; border-style: dashed !important; font-style: italic; }
+.diary-lp .comic-script--consult { border-color: #c9bdce; background: #f6f2f7; }
+.diary-lp .comic-script--consult p { background: #fff; }
+.diary-lp .comic-script--consult p:nth-child(n+2) b { color: #66527c; }
+.diary-lp .comic-script--climax { border-color: #c59aaa; }
+.diary-lp .comic-script--ending { border-color: #d1b978; background: #fffaf0; }
+.diary-lp .comic-night-interlude { position: relative; min-height: 460px; margin: -18px 14px 8px; padding: 34px 18px 28px; overflow: hidden; border: 7px solid #fffdf8; color: #fff; background: radial-gradient(circle at 72% 22%, rgba(196,139,123,.25), transparent 28%), linear-gradient(155deg, #34252d, #171821 72%); box-shadow: 4px 9px 22px rgba(69,52,60,.2); }
+.diary-lp .comic-night-interlude::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; background: linear-gradient(transparent, rgba(6,7,12,.78)); }
+.diary-lp .comic-night-interlude__balloon { position: relative; z-index: 2; box-sizing: border-box; width: 80%; margin: 0 0 22px; padding: 16px 16px 15px 44px; border: 2px solid #342d32; border-radius: 48% / 38%; color: #332c30; background: #fff; font-family: var(--serif); font-size: 12px; line-height: 1.38; letter-spacing: -.02em; }
+.diary-lp .comic-night-interlude__balloon::after { content: ""; position: absolute; bottom: -9px; left: 28px; width: 15px; height: 15px; border-right: 2px solid #342d32; border-bottom: 2px solid #342d32; background: #fff; transform: rotate(45deg); }
+.diary-lp .comic-night-interlude__balloon--right { margin-left: auto; }
+.diary-lp .comic-night-interlude__balloon--right::after { right: 28px; left: auto; }
+.diary-lp .comic-night-interlude__balloon b { position: absolute; top: 15px; left: 14px; color: #9d6275; font-family: var(--sans); font-size: 9px; }
+.diary-lp .comic-night-interlude__details { position: absolute; z-index: 1; right: 10%; bottom: 80px; left: 10%; height: 85px; border-bottom: 1px solid rgba(255,255,255,.22); }
+.diary-lp .comic-night-interlude__lamp { position: absolute; right: 8%; bottom: 0; width: 54px; height: 70px; border-radius: 50% 50% 8px 8px; background: radial-gradient(circle at 50% 35%, #e4b783, #7d5360 58%, #2a222c 60%); box-shadow: 0 0 38px rgba(226,170,116,.28); }
+.diary-lp .comic-night-interlude__hands { position: absolute; bottom: 8px; left: 33%; color: rgba(255,255,255,.38); font-family: Georgia, serif; font-size: 64px; transform: rotate(-8deg); }
+.diary-lp .comic-night-interlude > strong { position: absolute; z-index: 3; right: 0; bottom: 0; left: 0; padding: 24px 12px 20px; font-family: var(--serif); font-size: 16px; font-weight: 500; letter-spacing: .06em; text-align: center; }
+
+/* 漫画内吹き出し：ページごとに顔を避けて配置 */
+.diary-lp .comic-page > .comic-script { position: absolute; z-index: 8; inset: 7px; display: block; margin: 0; padding: 0; border: 0; background: none; box-shadow: none; pointer-events: none; }
+.diary-lp .comic-page > .comic-script p { position: absolute; display: block; width: 34%; max-width: none; margin: 0; padding: 2.5% 2.7%; border: 2px solid rgba(48,42,46,.92); border-radius: 48% / 34%; color: #302b2e; background: rgba(255,255,255,.98); box-shadow: 1px 3px 7px rgba(38,29,34,.16); font-size: clamp(10px,2.8vw,12.5px); font-weight: 700; line-height: 1.38; letter-spacing: -.025em; text-align: center; text-wrap: balance; word-break: normal; line-break: strict; overflow-wrap: break-word; }
+.diary-lp .comic-page > .comic-script p::after { content: ""; position: absolute; bottom: -7px; left: 24px; width: 12px; height: 12px; border-right: 2px solid rgba(48,42,46,.92); border-bottom: 2px solid rgba(48,42,46,.92); background: #fff; transform: rotate(45deg); }
+.diary-lp .comic-page > .comic-script p:nth-child(even)::after { right: 24px; left: auto; }
+.diary-lp .comic-page > .comic-script b { position: static; display: block; margin-bottom: .25em; color: #9d6275; font-size: .68em; line-height: 1; letter-spacing: .08em; text-align: center; }
+.diary-lp .comic-page > .comic-script .comic-script__narration,
+.diary-lp .comic-page > .comic-script .comic-script__thought { width: 40% !important; padding: 2.2% 2.5% !important; border: 0 !important; border-left: 4px solid #a86b80 !important; border-radius: 0 !important; color: #554a50; background: rgba(255,251,246,.96) !important; box-shadow: 1px 3px 8px rgba(38,29,34,.13) !important; font-size: clamp(9.5px,2.55vw,11.5px); font-style: normal; line-height: 1.38; letter-spacing: -.02em; text-align: center; text-wrap: pretty; word-break: normal; line-break: strict; }
+.diary-lp .comic-page > .comic-script .comic-script__narration::after,
+.diary-lp .comic-page > .comic-script .comic-script__thought::after { content: none; }
+
+#comic-page-01 .comic-script p:nth-child(1) { top: 3%; left: 15%; width: 48% !important; }
+#comic-page-01 .comic-script p:nth-child(2) { right: 1%; bottom: 2%; width: 39%; }
+
+#comic-page-01b .comic-script p:nth-child(1) { top: 17%; right: 1%; width: 38%; }
+#comic-page-01b .comic-script p:nth-child(2) { top: 38%; left: 2%; width: 38%; }
+#comic-page-01b .comic-script p:nth-child(3) { bottom: 3%; left: 2%; width: 41%; }
+
+#comic-page-02 .comic-script p:nth-child(1) { top: 1%; left: 1%; width: 42%; }
+#comic-page-02 .comic-script p:nth-child(2) { right: 1%; bottom: 2%; width: 43%; }
+
+#comic-page-03 .comic-script p:nth-child(1) { top: 25%; left: 1%; width: 43%; }
+#comic-page-03 .comic-script p:nth-child(2) { right: 1%; bottom: 2%; width: 42%; }
+
+#comic-page-04 .comic-script p:nth-child(1) { top: 18%; right: 1%; width: 44%; }
+#comic-page-04 .comic-script p:nth-child(2) { bottom: 2%; left: 2%; width: 46% !important; }
+
+#comic-page-04b .comic-script p:nth-child(1) { top: 18%; right: 1%; width: 38%; }
+#comic-page-04b .comic-script p:nth-child(2) { top: 43%; right: 2%; width: 38% !important; }
+#comic-page-04b .comic-script p:nth-child(3) { bottom: 2%; left: 1%; width: 44% !important; }
+
+#comic-page-05 .comic-script p:nth-child(1) { top: 34%; right: 2%; width: 43% !important; }
+
+#comic-page-06 .comic-script p:nth-child(1) { top: 11%; left: 4%; width: 42%; }
+#comic-page-06 .comic-script p:nth-child(2) { top: 60%; left: 4%; width: 44%; }
+
+#comic-page-06b .comic-script p:nth-child(1) { top: 3%; left: 2%; width: 43% !important; }
+#comic-page-06b .comic-script p:nth-child(2) { top: 40%; right: 2%; width: 42% !important; }
+#comic-page-06b .comic-script p:nth-child(3) { bottom: 2%; left: 28%; width: 47%; }
+
+#comic-page-07 .comic-script p:nth-child(1) { top: 17%; left: 25%; width: 50% !important; }
+#comic-page-07 .comic-script p:nth-child(2) { bottom: 3%; left: 1%; width: 45%; }
+#comic-page-07 .comic-script p:nth-child(3) { right: 1%; bottom: 3%; width: 46%; }
+
+#comic-page-08 .comic-script p:nth-child(1) { top: 25%; right: 1%; width: 49%; }
+#comic-page-08 .comic-script p:nth-child(2) { top: 66%; left: 1%; width: 49% !important; }
+#comic-page-08 .comic-script p:nth-child(3) { right: 1%; bottom: 2%; width: 48% !important; }
 .diary-lp .manga-ending { margin: 48px 14px 0; padding: 34px 20px 42px; border: 1px dashed #cbb9ae; color: #4e474d; background: rgba(255,250,241,.78); transform: rotate(.2deg); }
 .diary-lp .manga-ending > p, .diary-lp .manga-ending > strong { font-family: var(--hand); }
 .diary-lp .manga-ending > strong { color: #4b4148; }
@@ -370,6 +461,8 @@ button, input { font: inherit; }
 .diary-lp .final-cta .cta-button:hover { transform: rotate(.35deg) translateY(-2px); }
 .diary-lp .final-cta small { color: #82757a; }
 .diary-lp .final-cta .cta-button__eyebrow { color: #fff0c9; }
+.diary-lp .final-cta { order: 20; }
+.diary-lp .diagnosis-section { order: 21; }
 
 /* Pattern 3: 誰にも言えない恋の1分カード診断 */
 [hidden] { display: none !important; }
@@ -435,9 +528,9 @@ button, input { font: inherit; }
 .diagnosis-progress__meta b { color: rgba(255,255,255,.8); font-size: 11px; }
 .diagnosis-progress__meta i { color: #f1d4de; font-size: 17px; font-style: normal; }
 .diagnosis-progress__bar { height: 4px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,.12); }
-.diagnosis-progress__bar > span { width: 16.666%; height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #d9b778, #eab7ca); box-shadow: 0 0 12px rgba(234,183,202,.55); transition: width .4s ease; }
-.diagnosis-progress__symbols { display: grid; grid-template-columns: repeat(6, 1fr); margin-top: 8px; color: rgba(255,255,255,.22); text-align: center; }
-.diagnosis-progress__symbols i { font-size: 12px; font-style: normal; transition: color .3s ease, transform .3s ease; }
+.diagnosis-progress__bar > span { width: 10%; height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #d9b778, #eab7ca); box-shadow: 0 0 12px rgba(234,183,202,.55); transition: width .4s ease; }
+.diagnosis-progress__symbols { display: grid; grid-template-columns: repeat(10, 1fr); margin-top: 8px; color: rgba(255,255,255,.22); text-align: center; }
+.diagnosis-progress__symbols i { font-size: 10px; font-style: normal; transition: color .3s ease, transform .3s ease; }
 .diagnosis-progress__symbols i.is-complete { color: #edc7d4; transform: scale(1.22); }
 .diagnosis-question {
   position: relative;
@@ -463,16 +556,20 @@ button, input { font: inherit; }
 .diagnosis-question__icon { position: absolute; top: 24px; right: 26px; color: #b68a9e; font-family: Georgia, serif; font-size: 18px; font-style: normal; }
 .diagnosis-question p { position: relative; z-index: 1; margin: 0; font-family: var(--hand); font-size: 18px; line-height: 2; }
 .diagnosis-question strong { color: #915f76; font-size: 20px; font-weight: 700; background: linear-gradient(transparent 72%, rgba(226,190,204,.42) 0); }
-.diagnosis-actions { display: grid; grid-template-columns: 1.05fr .95fr; gap: 9px; margin-top: 17px; }
-.diagnosis-actions button { min-height: 61px; padding: 9px 8px; border-radius: 8px; font-size: 12px; font-weight: 700; line-height: 1.45; cursor: pointer; transition: transform .16s ease, filter .16s ease; }
-.diagnosis-actions button:first-child { border: 1px solid #d29caf; color: #fff; background: linear-gradient(115deg, #9d6078, #c07f97); box-shadow: 0 8px 19px rgba(13,10,25,.18); }
-.diagnosis-actions button:last-child { border: 1px solid rgba(255,255,255,.3); color: rgba(255,255,255,.75); background: rgba(255,255,255,.07); }
+.diagnosis-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 17px; }
+.diagnosis-actions button { min-height: 57px; padding: 9px 7px; border: 1px solid rgba(255,255,255,.28); border-radius: 9px; color: rgba(255,255,255,.82); background: rgba(255,255,255,.07); font-size: 11px; font-weight: 700; line-height: 1.45; cursor: pointer; transition: transform .16s ease, filter .16s ease, box-shadow .16s ease; }
+.diagnosis-actions button[data-score="3"] { border-color: #d7a3b5; color: #fff; background: linear-gradient(115deg, #955a73, #c67f99); box-shadow: 0 8px 19px rgba(13,10,25,.2); }
+.diagnosis-actions button[data-score="2"] { border-color: rgba(224,178,197,.6); background: rgba(190,117,148,.27); }
+.diagnosis-actions button[data-score="1"] { background: rgba(255,255,255,.095); }
+.diagnosis-actions button[data-score="0"] { color: rgba(255,255,255,.62); background: rgba(20,19,40,.28); }
 .diagnosis-actions button span { margin-right: 5px; font-size: 14px; }
 .diagnosis-actions button:hover { transform: translateY(-2px); filter: brightness(1.07); }
 .diagnosis-actions button:active { transform: scale(.98); }
 .diagnosis-actions button:disabled { cursor: default; filter: none; opacity: .72; }
-.diagnosis-question.is-answered[data-choice="yes"] { box-shadow: 0 22px 44px rgba(8,8,21,.28), inset 0 0 0 8px rgba(255,255,255,.55), 0 0 0 3px rgba(227,174,197,.28); transform: scale(.985); }
-.diagnosis-question.is-answered[data-choice="no"] { opacity: .82; transform: scale(.985); }
+.diagnosis-question.is-answered[data-choice="3"],
+.diagnosis-question.is-answered[data-choice="2"] { box-shadow: 0 22px 44px rgba(8,8,21,.28), inset 0 0 0 8px rgba(255,255,255,.55), 0 0 0 3px rgba(227,174,197,.28); transform: scale(.985); }
+.diagnosis-question.is-answered[data-choice="1"],
+.diagnosis-question.is-answered[data-choice="0"] { opacity: .82; transform: scale(.985); }
 
 .diagnosis-loading { min-height: 470px; display: grid; align-content: center; justify-items: center; text-align: center; animation: diagnosis-fade-up .35s ease both; }
 .diagnosis-loading__cards { position: relative; width: 96px; height: 126px; margin-bottom: 33px; }
@@ -488,6 +585,7 @@ button, input { font: inherit; }
 .diagnosis-result__card { position: relative; padding: 36px 23px 28px; overflow: hidden; border: 1px solid #dcc4cf; border-radius: 14px; color: #4d4048; background: linear-gradient(145deg, #fffaf1, #f9e9ed); box-shadow: 0 22px 48px rgba(8,8,21,.32), inset 0 0 0 7px rgba(255,255,255,.55); }
 .diagnosis-result__card::before { content: ""; position: absolute; width: 190px; height: 190px; top: -105px; right: -90px; border: 1px solid rgba(168,108,137,.13); border-radius: 50%; }
 .diagnosis-result__moon { width: 58px; height: 58px; display: grid; place-items: center; margin: 0 auto 14px; border: 1px solid #d4ae77; border-radius: 50%; color: #a36a82; background: #fff8e8; box-shadow: 0 0 0 6px rgba(212,174,119,.1); font-family: Georgia, serif; font-size: 27px; }
+.diagnosis-result__code { display: inline-block; margin-bottom: 8px; padding: 3px 10px; border: 1px solid rgba(158,103,128,.28); border-radius: 999px; color: #936177; background: rgba(255,255,255,.62); font-family: Georgia, serif; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
 .diagnosis-result__card > p:not(.diagnosis-result__description) { margin: 0; color: #8e6575; font-family: var(--hand); font-size: 13px; }
 .diagnosis-result__card h3 { margin: 3px 0 15px; color: #573b4b; font-family: var(--hand); font-size: 25px; line-height: 1.55; }
 .diagnosis-result__line { display: flex; align-items: center; gap: 9px; margin: 0 auto 19px; color: #b18456; }
@@ -495,6 +593,16 @@ button, input { font: inherit; }
 .diagnosis-result__line::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, #d2b178); }
 .diagnosis-result__line::after { background: linear-gradient(90deg, #d2b178, transparent); }
 .diagnosis-result__description { margin: 0; color: #655b61; font-size: 13px; line-height: 1.9; text-align: left; }
+.diagnosis-result__traits { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 17px; }
+.diagnosis-result__traits span { padding: 5px 10px; border-radius: 999px; color: #855d70; background: #f2dfe6; font-size: 10px; font-weight: 700; }
+.diagnosis-result__profile { margin-top: 22px; padding: 17px 15px 15px; border: 1px solid rgba(184,143,159,.32); background: rgba(255,255,255,.52); text-align: left; }
+.diagnosis-result__profile > small { display: block; margin-bottom: 12px; color: #895f71; font-size: 10px; font-weight: 700; }
+.diagnosis-result__profile > div { display: grid; gap: 9px; }
+.diagnosis-axis { display: grid; grid-template-columns: 72px 1fr 35px; gap: 7px; align-items: center; }
+.diagnosis-axis > span { color: #66575f; font-size: 10px; }
+.diagnosis-axis > i { height: 7px; overflow: hidden; border-radius: 999px; background: #e8d9df; }
+.diagnosis-axis > i b { height: 100%; display: block; border-radius: inherit; background: linear-gradient(90deg, #b47790, #dfb58c); }
+.diagnosis-axis > em { color: #906879; font-family: Georgia, serif; font-size: 10px; font-style: normal; text-align: right; }
 .diagnosis-result__topics { margin-top: 23px; padding: 17px 17px 14px; border: 1px dashed #d1aebb; background: rgba(255,255,255,.62); text-align: left; }
 .diagnosis-result__topics small { display: block; margin: 0 0 8px; color: #916275; font-size: 10px; font-weight: 700; }
 .diagnosis-result__topics ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
