@@ -1,97 +1,392 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="復縁したいけれど、今LINEしてよいか迷う夜に。送る前の3チェックと漫画で、次の行動を短く整理します。">
-  <!-- 広告運用LPのためnoindex。SEO運用へ切り替える場合は、公開前審査後に本設定を削除すること。 -->
-  <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#f8f3eb">
-  <title>復縁したい。でも今、連絡していい？｜送る前の3チェック</title>
-  <link rel="stylesheet" href="styles.css?v=20260827-faq-a5">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>彼は私のこと、どう思ってるんだろう？</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #FFF8FA;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+  }
+  .lp-container {
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 25px rgba(232, 91, 122, 0.08);
+  }
+  .manga-frame {
+    width: 100%;
+    position: relative;
+    background-color: #FFF9FA;
+    border-top: 1px dashed #FCE8EE;
+    border-bottom: 1px dashed #FCE8EE;
+  }
+  .btn-cta {
+    background: linear-gradient(135deg, #FF6B8B 0%, #E85B7A 100%);
+    box-shadow: 0 6px 18px rgba(232, 91, 122, 0.35);
+    transition: all 0.2s ease;
+  }
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 91, 122, 0.45);
+  }
+  .btn-cta:active {
+    transform: translateY(1px);
+  }
+</style>
+
+<script>
+function handleImageFallback(img, title, path, icon) {
+  img.onerror = null;
+  const placeholder = document.createElement('div');
+  placeholder.className = 'w-full min-h-[300px] flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-[#FFF5F7] to-[#FFFFFF] border-y border-pink-100';
+  placeholder.innerHTML = `
+    <div class="text-4xl mb-2">${icon || '📖'}</div>
+    <div class="text-base font-bold text-gray-700">${title}</div>
+    <div class="text-xs font-mono text-pink-400 bg-pink-50 px-3 py-1 rounded-full mt-1.5">${path}</div>
+    <div class="text-[11px] text-gray-400 mt-2">※ 画像配置後に自動で表示されます</div>
+  `;
+  if (img.parentNode) {
+    img.parentNode.replaceChild(placeholder, img);
+  }
+}
+</script>
 </head>
-<body class="diary-lp diary-lp--long">
-  <div class="draft-bar" role="note">制作中・審査前ドラフト　公開前に広告主・ASPの確認が必要です</div>
 
-  <main id="top">
-    <article class="article">
-      <header class="hero">
-        <div class="hero__copy">
-          <h1>あの人の本音と、<em>二人の未来を占う。</em></h1>
-          <p class="hero__lead">相手の気持ち・復縁・片思い・結婚</p>
-        </div>
-        <figure class="hero__visual"><img src="assets/hero-v6-mobile-tarot-illustration.png" width="1122" height="1402" fetchpriority="high" alt="パステル紫の占いテーブルに、ハート・月・太陽を描いた3枚のタロットカードと天然石を並べた手描きイラスト"></figure>
-        <span class="hero__pr">PR</span>
-      </header>
+<body class="min-h-screen bg-[#FFF8FA]">
+<main class="lp-container min-h-screen pb-16">
 
-      <div class="article-body">
-        <section id="quick-answer" class="answer-section" aria-labelledby="answer-title">
-          <p class="section-label">ある日の夜、23:48</p>
-          <h2 id="answer-title">送りたい。でも<br>嫌われるのが怖い。</h2>
-          <div class="answer-lead"><strong class="answer-lead__question">このまま思い切って、連絡してしまおうか。</strong><p>でも、もし嫌われたら――。何度もスマホを開いては閉じて、ひとりで答えを探していました。同じように悩んでいた、ある女性のお話です。</p></div>
-          <p class="answer-question">あなたが知りたいのは、どんなことですか？</p>
-          <ul class="answer-checks"><li><span>1</span>あの人が心に隠している、本当の気持ち</li><li><span>2</span>二人の恋が、これからどう進んでいくのか</li><li><span>3</span>この恋を待つべきか、次へ進むべきか</li></ul>
-        </section>
+  <!-- =====================================================
+       冒頭セクション
+       ===================================================== -->
+  <section class="px-5 pt-12 pb-8 text-center bg-[#FFF8FA]">
+    <p class="text-xs text-gray-500 tracking-wider mb-3">――彼と出会って、少しだけ変わった。</p>
+    <h1 class="text-2xl font-extrabold leading-snug text-gray-900 mb-6">
+      彼は私のこと、<br><span class="text-[#E85B7A]">どう思ってるんだろう？</span>
+    </h1>
 
-        <section class="manga-section" aria-labelledby="manga-title">
-          <div class="manga-heading"><span>あの夜のこと</span><h2 id="manga-title">誰にも言えない恋を、ひとりで抱えていた。</h2><p>複雑な恋愛相談の利用場面を想定したイメージストーリーです。</p></div>
-          <div class="comic-pages">
-            <figure class="comic-page comic-page--complex" id="comic-page-01">
-              <div class="comic-page__art"><img src="assets/manga-complex-love-v1-page-01.png" width="864" height="1821" loading="lazy" alt="会う準備をしていた夜に彼からキャンセルの連絡が届き、二人分のグラスを前に一人で座る35歳女性を描いた3コマ漫画"><p class="comic-balloon complex-p1a">今夜、会えるのを<br>楽しみにしてた。</p><p class="comic-message complex-p1b"><b>彼</b>ごめん。今日は<br>会えなくなった</p><p class="comic-balloon complex-p1c">そっか。<br>大丈夫だよ</p><p class="comic-narration complex-p1d">大丈夫じゃないなんて、<br>言えるわけない。</p></div>
-            </figure>
+    <div class="my-6">
+      <img
+        src="images/冒頭.webp"
+        alt="冒頭 主人公イラスト"
+        class="w-full rounded-2xl mx-auto shadow-sm"
+        onerror="handleImageFallback(this, '冒頭 主人公イラスト', 'images/冒頭.webp', '🌸');"
+      >
+    </div>
 
-            <figure class="comic-page comic-page--complex" id="comic-page-02">
-              <div class="comic-page__art"><img src="assets/manga-complex-love-v1-page-02.png" width="864" height="1821" loading="lazy" alt="友人とのランチで恋愛について聞かれても本当のことを話せず、夜に一人でスマートフォンを握る35歳女性を描いた4コマ漫画"><p class="comic-balloon complex-p2a"><b>友人</b>最近、いい人<br>いないの？</p><p class="comic-balloon complex-p2b">うーん。今は<br>仕事が忙しくて</p><p class="comic-narration complex-p2c">好きな人はいる。<br>でも、その人には<br>帰る場所がある。</p><p class="comic-narration comic-narration--dark complex-p2d">本当のことを、<br>誰かに話したい。</p></div>
-            </figure>
-
-            <figure class="comic-page comic-page--complex" id="comic-page-03">
-              <div class="comic-page__art"><img src="assets/manga-complex-love-v2-page-03.png" width="880" height="1787" loading="lazy" alt="複雑な恋愛を相談できる先生をスマートフォンで探し、斜めに置いたノートへ3つの質問を手書きする35歳女性を描いた4コマ漫画"><p class="comic-narration complex-p3a">こんな恋、<br>誰にも話せない。</p><p class="comic-balloon complex-p3b">複雑な恋に詳しい<br>先生もいるんだ……</p><p class="comic-balloon complex-p3c">15分だけなら、<br>話してみようかな</p></div>
-            </figure>
-
-            <figure class="comic-page comic-page--complex" id="comic-page-04">
-              <div class="comic-page__art"><img src="assets/manga-complex-love-v2-page-04.png" width="862" height="1825" loading="lazy" alt="相談時間を決めて電話占いを利用し、ノートに自分が幸せになれる選択をすると手書きしたあと穏やかに眠る35歳女性を描いた4コマ漫画"><p class="comic-balloon complex-p4a">今日は15分だけ。<br>聞きたいことは<br>3つです</p><p class="comic-balloon complex-p4b"><b>先生</b>彼の気持ちだけでなく、<br>あなたが幸せになれる<br>未来も見てみましょう</p><p class="comic-narration comic-narration--dark complex-p4c">彼を待つだけの夜から、<br>自分の未来を考える夜へ。</p></div>
-            </figure>
-          </div>
-          <div class="manga-ending"><p>未来を決めてもらうのではなく、誰にも言えなかった気持ちを整理する。</p><strong>そんな占いの使い方もあると知りました。</strong><small>※上記は利用シーンをもとにした体験イメージです。</small></div>
-        </section>
-
-        <section class="section experience-section" aria-labelledby="experience-title">
-          <p class="section-label">話してみて思ったこと</p>
-          <h2 id="experience-title"><span>欲しかったのは、彼の答えより</span><span>気持ちを話せる時間だったのかも。</span></h2>
-          <div class="experience-story"><p>電話占いって、正直ちょっと緊張しました。</p><p>40代になって、既婚者の彼との関係はもう5年。「妻とは別れる」という言葉を信じて待っていたけれど、会えるのはいつも彼の都合がいいときだけ。友人にも家族にも話せず、このまま何年も待ち続けるのかなと思うと、夜になるたび苦しくなっていました。</p><p>先生に聞かれたのは、彼がどうするかよりも「私はこれから、どんな毎日を送りたい？」ということ。占いを受けたからといって、関係がすぐに変わったわけではありません。それでも、彼を待つだけが私の未来じゃないと思えたとき、少しだけ先に希望が見えました。</p></div>
-          <p class="source-note">※40代女性の複雑恋愛を想定した体験イメージです。</p>
-          <div class="experience-points"><article><span>01</span><div><h3>聞きたいことはメモでOK</h3><p>彼の気持ち、二人のこれから、私が大切にしたいこと。</p></div></article><article><span>02</span><div><h3>口コミを見ながら、話しやすそうな先生を選ぶ</h3><p>複雑な恋愛や復縁を得意とする先生から探せました。</p></div></article><article><span>03</span><div><h3>いきなり答えを決めなくていい</h3><p>まずは話してみる。それくらいの気持ちで始めました。</p></div></article></div>
-        </section>
-
-        <section class="service-section" aria-labelledby="service-title">
-          <div class="service-heading"><p>ちょっと安心できたポイント</p><h2 id="service-title">電話占いって少し不安。<br>でも、私にも使えそう。</h2><span>いきなり申し込むのではなく、まずは気になることをちょっと調べてみました。</span></div>
-          <div class="service-features proof-features"><article><span>01</span><div><h3>運営元がちゃんとわかる</h3><p>プライム市場上場グループが運営していると知って、少し安心できました。</p></div></article><article><span>02</span><div><h3>悩みに合いそうな先生を探せる</h3><p>復縁や相手の気持ちなど、得意な相談と口コミから選べます。</p></div></article><article class="benefit-feature"><span>03</span><div><h3>初めてなら、お得に試せる</h3><p>初回特典は最大21,000円分無料。まずは特典の内容を見てから決めてもよさそうです。</p></div></article></div>
-          <p class="source-note">※特典には条件・上限・期限があります。詳しい内容は公式サイトで見られます。</p>
-        </section>
-
-        <section class="section flow-section">
-          <p class="section-label">話す前のちょっとした準備</p><h2>話す前に、これだけメモしておくと安心</h2>
-          <ol class="flow-list flow-list--compact"><li><span>1</span><div><h3>聞きたいことをメモする</h3><p>いちばん知りたいことから順番をつけます。</p></div></li><li><span>2</span><div><h3>先生の得意分野を見る</h3><p>自分の悩みに近い相談内容や口コミに目を通します。</p></div></li><li><span>3</span><div><h3>今日はここまでと決める</h3><p>話したい範囲を先に決めておくと安心です。</p></div></li></ol>
-        </section>
-
-        <section class="section faq-section">
-          <p class="section-label">申し込む前に気になったこと</p><h2>気になることは、先に調べておきました。</h2>
-          <div class="faq-list">
-            <details><summary>初回特典はどう使う？</summary><div><p>特典ごとに使える条件や期限が違うので、先に公式サイトを見ておくと安心です。</p></div></details>
-            <details><summary>先生はどう選ぶ？</summary><div><p>復縁などの得意分野と口コミを見て、「話しやすそう」と思える先生から探せます。</p></div></details>
-            <details><summary>相談内容を周囲に知られない？</summary><div><p>個人情報の扱いは公式サイトに載っています。気になるときは、先に目を通しておくと安心です。</p></div></details>
-            <details><summary>結果は必ず当たる？</summary><div><p>必ず当たるものではありません。未来を決めてもらうのではなく、気持ちを整理するきっかけとして考えています。</p></div></details>
-            <details><summary>何を話せばいいか不安</summary><div><p>今の状況と聞きたいことを簡単にメモしておくと、話し始めやすくなります。</p></div></details>
-          </div>
-        </section>
-
-        <section class="final-cta" aria-labelledby="final-cta-title"><span class="final-cta__mark" aria-hidden="true">✎</span><p class="final-cta__label">ここまで読んだ私へ</p><p>今すぐ相談しなくても大丈夫。まずは、どんな先生がいるか見てみることにしました。</p><h2 id="final-cta-title">私に合いそうな先生、いるかな？</h2><a class="cta-button js-cta" data-cta-location="article-bottom" href="https://sp.minden.jp/lp_20/?ref=afi-afb-001" rel="sponsored nofollow noopener"><span><small class="cta-button__eyebrow">初回特典 最大21,000円分無料</small>気になる先生を見てみる</span><b aria-hidden="true">→</b></a><small>※特典には条件・上限・期限があります。</small></section>
+    <div class="text-[15px] leading-relaxed text-gray-700 space-y-4 text-center mt-6">
+      <p>5年付き合った彼と別れてから、<br>「もう、新しい恋なんてないのかも……」<br>そう思っていた私。</p>
+      <p>そんなある日、マッチングアプリで出会ったのが、<br><strong class="text-[#E85B7A]">年下の彼でした。</strong></p>
+      <div class="py-3 bg-white rounded-xl border border-pink-100 shadow-sm mt-4">
+        <p class="font-medium text-gray-800">話していると楽しい。<br><span class="font-bold text-gray-900">もっと会いたい。</span><br>久しぶりに、そんな気持ちになりました。</p>
       </div>
-    </article>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer" id="footer"><div class="footer__inner"><p class="footer__brand"><strong>わたしの恋愛整理帖</strong><span>PR</span></p><nav aria-label="みんなの電話占い公式情報"><a href="https://sp.minden.jp/page/company/" rel="nofollow noopener">運営会社</a><a href="https://sp.minden.jp/page/rule/" rel="nofollow noopener">利用規約</a><a href="https://sp.minden.jp/page/aegis/" rel="nofollow noopener">プライバシーポリシー</a><a href="https://sp.minden.jp/page/burden/" rel="nofollow noopener">特定商取引法に基づく表示</a></nav><small>※上記リンクはみんなの電話占い公式サイトへ移動します。</small></div></footer>
+  <section class="bg-[#FFF1F5] py-10 px-5 text-center">
+    <p class="text-base font-bold text-gray-600 mb-2">でも――</p>
+    <h2 class="text-xl font-bold text-gray-900 leading-normal">
+      年上の私を、<br>彼はどう思ってる？
+    </h2>
+    <p class="text-sm text-gray-500 mt-2">もしかして、私の勘違いなのかな……</p>
+    
+    <div class="mt-8 pt-6 border-t border-pink-200/60">
+      <p class="text-sm text-gray-600 leading-relaxed">
+        まだ一度会っただけ。<br>だからこそ、彼の気持ちは分からなかった。
+      </p>
+      <p class="text-base font-bold text-[#E85B7A] mt-3">
+        そんな私の恋が、ここから動き始めます。
+      </p>
+    </div>
+  </section>
 
-  <script src="script.js?v=20260827-1"></script>
+  <!-- =====================================================
+       漫画 1 & 2（見出し・章表記なし）
+       ===================================================== -->
+  <section class="manga-frame">
+    <img
+      src="images/第1章.webp"
+      alt="漫画コマ 1"
+      class="w-full block"
+      onerror="handleImageFallback(this, '漫画コマ 1', 'images/第1章.webp', '📖');"
+    >
+  </section>
+
+  <section class="manga-frame border-t-0">
+    <img
+      src="images/第2章.webp"
+      alt="漫画コマ 2"
+      class="w-full block"
+      onerror="handleImageFallback(this, '漫画コマ 2', 'images/第2章.webp', '📖');"
+    >
+  </section>
+
+  <!-- =====================================================
+       中間記事①
+       ===================================================== -->
+  <article class="px-6 py-12 bg-white">
+    <p class="text-xs text-gray-400 text-center tracking-wider mb-2">――あの日から、少しだけ気になっていた。</p>
+    <h2 class="text-xl font-bold text-center text-gray-900 leading-relaxed mb-6">
+      楽しかった。でも……<br>彼はどう思ってるんだろう？
+    </h2>
+
+    <div class="text-[15px] leading-relaxed text-gray-700 space-y-4">
+      <p>彼と会ったのは、まだ一度だけ。</p>
+      <p>それでも、帰ってからふとした瞬間に、彼の笑顔を思い出してしまう。</p>
+
+      <div class="bg-[#FFF1F5] text-[#E85B7A] font-bold text-center py-3.5 px-4 rounded-xl my-5 border border-pink-200/50">
+        「また一緒にご飯行きましょう」
+      </div>
+
+      <p>そう言ってくれたことも嬉しかった。</p>
+      <p>「年上の女性が好き」と言ってくれたことも、なんとなく気になっていた。</p>
+      <p>もしかして、少しくらいは私のことを気にしてくれているのかな。</p>
+
+      <div class="my-6 p-4 rounded-xl bg-pink-50/50 border-l-4 border-[#E85B7A] text-gray-800 text-sm italic text-center">
+        「これって、私がちょっと意識しすぎてるだけなのかな？」
+      </div>
+
+      <p>久しぶりの恋だからこそ、どこまで期待していいのか分からない。友達に相談するほど大げさなことでもない気がする。</p>
+      <p>でも、自分の中では確かに少し気になっている。</p>
+    </div>
+
+    <div class="my-8 text-center">
+      <img
+        src="images/中間記事1.webp"
+        alt="主人公イラスト（少し照れる）"
+        class="w-3/5 max-w-[240px] mx-auto"
+        onerror="handleImageFallback(this, '主人公イラスト（少し照れる）', 'images/中間記事1.webp', '💭');"
+      >
+    </div>
+
+    <div class="pt-6 border-t border-pink-100 text-center">
+      <p class="text-lg font-bold text-gray-900 leading-relaxed">
+        「彼は私のこと、どう思ってるんだろう？」
+      </p>
+      <p class="text-xs text-gray-500 mt-2">そんな小さな疑問が、日に日に頭から離れなくなっていきました。</p>
+    </div>
+  </article>
+
+  <!-- =====================================================
+       CTA①
+       ===================================================== -->
+  <section class="px-5 py-8 bg-[#FFF8FA]">
+    <div class="bg-white rounded-3xl p-6 text-center border border-pink-100 shadow-sm">
+      <div class="w-24 mx-auto mb-3">
+        <img
+          src="images/CTA1.webp"
+          alt="主人公アイコン"
+          class="w-full"
+          onerror="handleImageFallback(this, '主人公アイコン', 'images/CTA1.webp', '📱');"
+        >
+      </div>
+      <h3 class="text-lg font-bold text-gray-900 leading-snug">
+        彼の本音、ちょっと気にならない？
+      </h3>
+      <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+        一人で考え続けるより、誰かに相談してみるという選択肢も。
+      </p>
+
+      <a
+        href="https://sp.minden.jp/lp_58/?ref=review-sakai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-cta block w-full py-4 px-6 rounded-full text-white font-bold text-base mt-5"
+      >
+        💕 恋愛の悩みを相談してみる ›
+      </a>
+      <p class="text-[11px] text-gray-400 mt-2.5">恋愛・片思い・彼の気持ちなど</p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       漫画 3 & 4（見出し・章表記なし）
+       ===================================================== -->
+  <section class="manga-frame">
+    <img
+      src="images/第3章.webp"
+      alt="漫画コマ 3"
+      class="w-full block"
+      onerror="handleImageFallback(this, '漫画コマ 3', 'images/第3章.webp', '📖');"
+    >
+  </section>
+
+  <section class="manga-frame border-t-0">
+    <img
+      src="images/第4章.webp"
+      alt="漫画コマ 4"
+      class="w-full block"
+      onerror="handleImageFallback(this, '漫画コマ 4', 'images/第4章.webp', '📖');"
+    >
+  </section>
+
+  <!-- =====================================================
+       中間記事②
+       ===================================================== -->
+  <article class="px-6 py-12 bg-white">
+    <p class="text-xs text-gray-400 text-center tracking-wider mb-2">彼の気持ちが分かった、そのあとで。</p>
+    <h2 class="text-xl font-bold text-center text-gray-900 leading-relaxed mb-6">
+      彼の気持ちを知っただけでは、<br>まだ一歩踏み出せなかった。
+    </h2>
+
+    <div class="text-[15px] leading-relaxed text-gray-700 space-y-4">
+      <p>電話占いで、彼も私に好意を持ってくれていると知り、少し安心しました。</p>
+      
+      <div class="bg-[#FFF8FA] p-4 rounded-xl border border-pink-100 text-center my-4">
+        <p class="font-bold text-gray-800 text-sm">「じゃあ、私はこれからどうすればいいんだろう？」</p>
+      </div>
+
+      <p>年下の彼に「重い」と思われたくない。だから私は、嬉しくても平気なふりをして、余裕のある大人でいようとしていました。</p>
+      <p>そんな私に、先生がくれたのは意外なくらいシンプルなアドバイス。</p>
+
+      <div class="bg-[#FFF1F5] p-5 rounded-2xl border border-pink-200 text-center my-5">
+        <p class="text-sm font-bold text-gray-800 leading-relaxed">
+          「無理に大人っぽく振る舞わなくていいんですよ。<br>次に会ったときは、少しだけ素直に甘えてみてください」
+        </p>
+      </div>
+
+      <p>その言葉を聞いて、少し肩の力が抜けました。</p>
+      <p class="text-center font-bold text-gray-900">「それなら、私にもできるかもしれない。」</p>
+    </div>
+
+    <div class="my-8 text-center">
+      <img
+        src="images/中間記事2.webp"
+        alt="主人公イラスト（安心した表情）"
+        class="w-3/5 max-w-[240px] mx-auto"
+        onerror="handleImageFallback(this, '主人公イラスト（安心した表情）', 'images/中間記事2.webp', '✨');"
+      >
+    </div>
+
+    <div class="pt-6 border-t border-pink-100 text-center">
+      <p class="text-lg font-bold text-gray-900 leading-relaxed">
+        次に彼と会うときは、<br>少しだけ素直に甘えてみよう。
+      </p>
+      <p class="text-xs text-gray-500 mt-2">そう思うと、次に会える日が少し楽しみになりました。</p>
+    </div>
+  </article>
+
+  <!-- =====================================================
+       CTA②
+       ===================================================== -->
+  <section class="px-5 py-8 bg-[#FFF8FA]">
+    <div class="bg-white rounded-3xl p-6 text-center border border-pink-100 shadow-sm">
+      <h3 class="text-lg font-bold text-gray-900 leading-snug">
+        彼の気持ち、少しだけ覗いてみませんか？
+      </h3>
+      <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+        一人で悩み続けるより、誰かに相談してみる。<br>それだけでも、気持ちが少し軽くなるかもしれません。
+      </p>
+
+      <div class="w-24 mx-auto my-4">
+        <img
+          src="images/CTA2.webp"
+          alt="主人公アイコン（安心）"
+          class="w-full"
+          onerror="handleImageFallback(this, '主人公アイコン（安心）', 'images/CTA2.webp', '🍀');"
+        >
+      </div>
+
+      <div class="bg-[#FFF9FA] py-3.5 px-4 rounded-xl border border-pink-100 my-4 text-xs font-medium text-gray-700">
+        「彼の気持ちが分かっただけで、少しだけ前を向けるようになりました。」
+      </div>
+
+      <p class="text-base font-bold text-gray-900">みんなの電話占い</p>
+      <p class="text-[11px] text-gray-400">恋愛・片思い・彼の気持ちなど</p>
+
+      <div class="my-4 py-2 bg-pink-50/60 rounded-xl">
+        <p class="text-xs text-gray-600">無料会員登録で</p>
+        <p class="text-xl font-extrabold text-[#E85B7A]">初回3,000円OFF</p>
+      </div>
+
+      <a
+        href="https://sp.minden.jp/lp_58/?ref=review-sakai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-cta block w-full py-4 px-6 rounded-full text-white font-bold text-base mt-2"
+      >
+        💕 恋愛の悩みを相談してみる ›
+      </a>
+      <p class="text-[11px] text-gray-400 mt-2.5">無料会員登録で初回3,000円OFF</p>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       漫画 5 & 6（見出し・章表記なし）
+       ===================================================== -->
+  <section class="manga-frame">
+    <img
+      src="images/第5章.webp"
+      alt="漫画コマ 5"
+      class="w-full block"
+      onerror="handleImageFallback(this, '漫画コマ 5', 'images/第5章.webp', '📖');"
+    >
+  </section>
+
+  <section class="manga-frame border-t-0">
+    <img
+      src="images/第6章.webp"
+      alt="漫画コマ 6"
+      class="w-full block"
+      onerror="handleImageFallback(this, '漫画コマ 6', 'images/第6章.webp', '📖');"
+    >
+  </section>
+
+  <!-- =====================================================
+       最終CTA
+       ===================================================== -->
+  <section class="px-5 pt-12 pb-14 bg-[#FFF8FA] text-center">
+    <div class="max-w-[420px] mx-auto">
+      <h2 class="text-2xl font-extrabold text-gray-900 leading-tight">
+        あなたも、一人で<br>悩まなくていい。
+      </h2>
+      <p class="text-sm font-bold text-gray-600 mt-2">
+        「彼は私のこと、どう思ってる？」
+      </p>
+
+      <div class="my-6">
+        <img
+          src="images/CTA3.webp"
+          alt="主人公イラスト（笑顔・安心）"
+          class="w-48 mx-auto"
+          onerror="handleImageFallback(this, '主人公イラスト（笑顔・安心）', 'images/CTA3.webp', '💖');"
+        >
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-pink-100 shadow-sm text-sm text-gray-700 leading-relaxed text-center mb-6">
+        あの時、誰にも言えなかった彼の気持ちを<br>
+        <strong class="text-[#E85B7A]">相談できた</strong>から、<strong class="text-[#E85B7A]">一歩踏み出せました。</strong>
+      </div>
+
+      <p class="text-lg font-bold text-gray-900">みんなの電話占い</p>
+      <p class="text-xs text-gray-400 mb-3">恋愛・片思い・彼の気持ちなど</p>
+
+      <div class="py-3 px-4 bg-white rounded-2xl border border-pink-100 inline-block mb-6 shadow-sm">
+        <p class="text-xs text-gray-500">今なら 無料会員登録で</p>
+        <p class="text-2xl font-extrabold text-[#E85B7A]">初回3,000円OFF</p>
+      </div>
+
+      <a
+        href="https://sp.minden.jp/lp_58/?ref=review-sakai"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-cta block w-full py-4 px-6 rounded-full text-white font-bold text-lg shadow-lg"
+      >
+        💕 恋愛の悩みを相談してみる ›
+      </a>
+
+      <p class="text-xs text-gray-400 mt-3">無料会員登録はこちら</p>
+    </div>
+  </section>
+
+</main>
 </body>
 </html>
